@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             element: document.getElementById('npc-2'),
             dialogue: [
                 "Saudações, jovem aprendiz do código! 🪄",
-                "Sou o Cavaleiro Heather, aqule que faz o site ganhar vida!",
+                "Sou o Cavaleiro Heather, aquele que faz o site ganhar vida!",
                 "O HTML constrói, o CSS enfeita, e eu... faço tudo se mover e reagir.",
                 "Você chegou longe, mas um último desafio o aguarda!",
                 "Mostre-me que você entende sobre ele, o JavaScript!"
