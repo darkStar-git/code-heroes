@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Heroes - O RPG da Programação</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <!-- Fonte pixelada para dar o toque 8-bit -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+
+        <!-- Tela Inicial -->
+        <div id="start-screen" class="game-screen active">
+            <h1 class="game-title">CODE HEROES</h1>
+            <p class="game-subtitle">Uma Jornada 8-Bit Pela Programação</p>
+            <button id="startButton" class="game-button">INICIAR AVENTURA</button>
+            <div class="pixel-art-decor top-left"></div>
+            <div class="pixel-art-decor top-right"></div>
+            <div class="pixel-art-decor bottom-left"></div>
+            <div class="pixel-art-decor bottom-right"></div>
+        </div>
+
+        <!-- Tela Principal do Jogo -->
+        <div id="game-screen" class="game-screen">
+            <div id="game-map">
+                <div id="player" class="character"></div>
+                <div id="npc-0" class="character npc npc-professor" data-npc-id="0"></div>
+                <div id="npc-1" class="character npc npc-mestra" data-npc-id="1"></div>
+                <div id="npc-2" class="character npc npc-guardia" data-npc-id="2"></div>
+
+                <!-- Elementos de ambiente para simular "inimigos" ou obstáculos -->
+                <div class="obstacle rock-1"></div>
+                <div class="obstacle tree-1"></div>
+                <div class="obstacle rock-2"></div>
+                <div class="obstacle tree-2"></div>
+            </div>
+            <div id="game-info">
+                <span id="score-display">Pontos: 0</span>
+                <span id="quest-display">Missão: 1/3</span>
+            </div>
+        </div>
+
+        <!-- Tela de Diálogo e Quest -->
+        <div id="quest-screen" class="game-screen">
+            <div id="dialogue-box">
+                <p id="npc-name"></p>
+                <p id="dialogue-text"></p>
+                <button id="continueDialogueButton" class="game-button hidden">Continuar</button>
+            </div>
+            <div id="question-box" class="hidden">
+                <p id="question-text"></p>
+                <div id="answer-options">
+                    <!-- Opções de resposta serão inseridas aqui via JS -->
+                </div>
+            </div>
+            <div id="feedback-box" class="hidden">
+                <p id="feedback-text"></p>
+                <button id="feedbackButton" class="game-button">OK</button>
+            </div>
+        </div>
+
+        <!-- Tela Final -->
+        <div id="end-screen" class="game-screen">
+            <h2 class="game-title">Jornada Concluída!</h2>
+            <p id="final-score" class="game-subtitle"></p>
+            <p class="inspiring-message">
+                Gostou do jogo ou sentiu criosidade de saber como foi feito? Vem fazer Desenvolvimento de Sistemas aqui na Etec, onde você vai aprender a fazer vários projetos como esse!
+            </p>
+            <button id="ctaButton" class="game-button cta-button" onclick="window.open('https://www.vestibulinhoetec.com.br/', '_blank')">
+                Saiba Mais Sobre a Etec
+            </button>
+            <p class="small-text">Sua jornada está apenas começando!</p>
+        </div>
+
+        <!-- Elementos de áudio (configurados no JS) -->
+        <audio id="bgm" loop></audio>
+        <audio id="sfxCorrect"></audio>
+        <audio id="sfxWrong"></audio>
+        <audio id="sfxQuestComplete"></audio>
+
+    </div>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
