@@ -347,3 +347,10 @@ img {
     color: #ccc;
 }
 
+.small-text.start-screen {
+    font-size: 0.8em;
+    margin-top: 60px;
+    color: #00ff78;
+}
+
+
