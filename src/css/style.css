@@ -8,6 +8,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     background-color: #1a1a2e; /* Fundo escuro */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -345,3 +346,4 @@ img {
     margin-top: 15px;
     color: #ccc;
 }
+
